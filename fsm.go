@@ -1,13 +1,13 @@
 package fsm
 
-type FSM interface {
+type FSM struct {
+	Events    []Event
+	Callbacks []Callback
 }
 
-func New() FSM {
-	return &fsm{
-		
+func New(events []Event, callbacks []Callback) FSM {
+	return FSM{
+		Events:    events,
+		Callbacks: callbacks,
 	}
-}
-
-type fsm struct {
 }
