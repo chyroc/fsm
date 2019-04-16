@@ -5,7 +5,4 @@ package fsm
 // before_all
 // after_all
 
-type Callback struct {
-	Name     string
-	Function func(e *Event) error
-}
+type Callback func(e Event) error
